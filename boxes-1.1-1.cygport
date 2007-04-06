@@ -1,0 +1,22 @@
+inherit emacs
+
+DESCRIPTION="Draws ASCII art boxes around text"
+HOMEPAGE="http://boxes.thomasjensen.com/"
+SRC_URI="http://boxes.thomasjensen.com/download/${P}.src.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	rm -f src/boxes.h src/lex.yy.c src/parser.{c,h} doc/boxes.1
+	cygmake GLOBALCONF=/etc/boxes
+}
+
+src_install() {
+	cd ${B}
+	dobin src/boxes.exe
+	doman doc/boxes.1
+	doemacs doc/boxes.el
+
+	insinto /etc
+	newins boxes-config boxes
+}

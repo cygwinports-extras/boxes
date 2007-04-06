@@ -1,0 +1,66 @@
+boxes
+------------------------------------------
+boxes is a text filter which can draw ASCII art boxes around its input 
+text. These boxes may also be removed, even if they have been badly 
+damaged by editing of the text inside. Since boxes may be open on any 
+side, boxes can also be used to create regional comments in any 
+programming language. With the help of an editor macro or mapping, 
+damaged boxes can easily be repaired. This is useful for making the 
+function headers in your programming language look better, for spicing 
+up your news postings and emails, or just for decorating your 
+documentation files.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+
+Build requirements:
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  bison-2.3-1
+  cygport-0.2.11-1
+  flex-2.5.33-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://boxes.thomasjensen.com/
+
+Canonical download:
+  http://boxes.thomasjensen.com/download/
+
+-------------------------------------------
+
+Build instructions:
+  unpack boxes-1.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./boxes-1.1-X.cygport all
+
+This will create:
+  /usr/src/boxes-1.1-X-src.tar.bz2
+  /usr/src/boxes-1.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/boxes
+  /usr/bin/boxes.exe
+  /usr/share/doc/Cygwin/boxes-1.1.README
+  /usr/share/doc/boxes-1.1/COPYING
+  /usr/share/doc/boxes-1.1/README
+  /usr/share/emacs/site-lisp/boxes.el
+  /usr/share/man/man1/boxes.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.1-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
